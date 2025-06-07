@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuantumDropAI - AI Bot</title>
 
   <!-- Meta Pixel Code -->
@@ -18,20 +19,28 @@
     fbq('init', '586514680582580');
     fbq('track', 'PageView');
   </script>
-  <noscript>
-    <img height="1" width="1" style="display:none"
-         src="https://www.facebook.com/tr?id=586514680582580&ev=PageView&noscript=1"/>
-  </noscript>
   <!-- End Meta Pixel Code -->
 
   <style>
-    body {
+    html, body {
+      margin: 0;
+      padding: 0;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      max-width: 600px;
-      margin: 0 auto;
-      padding: 20px;
-      color: #333;
       background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+      color: #333;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
     }
 
     .header {
@@ -160,6 +169,11 @@
   </style>
 </head>
 <body>
+<noscript>
+  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=586514680582580&ev=PageView&noscript=1">
+</noscript>
+
+<div class="container">
   <div class="header">
     <h1>Telegram</h1>
     <a href="https://telegram.org/" class="download-btn">DOWNLOAD TELEGRAM</a>
@@ -169,18 +183,19 @@
 
   <div class="bot-info">
     <div class="profile-pic">
-      <img src="https://quantumdropai.github.io/QuantumdropAI/quantumdropAI.jpg" alt="QuantumDropAI Logo" />
+      <img src="https://quantumdropai.github.io/QuantumdropAI/quantumdropAI.jpg" alt="QuantumDropAI Logo">
     </div>
 
     <div class="bot-name">QuantumDropAI</div>
     <div class="members-count">56,000+ active users</div>
 
     <div class="bot-description">
-      AI-powered crypto bot delivering real-time arbitrage opportunities, exclusive airdrops, and smart swap alerts. Stay ahead of the market with cutting-edge insights, token drops, and profitable swap deals. Your edge in the world of decentralized finance. 🚀
+      AI crypto bot for high-frequency trading, real-time arbitrage, airdrops & smart swap alerts. Get top DeFi insights, token drops & profit tips—stay ahead in crypto. 🚀
     </div>
 
     <a href="https://t.me/Eternal_blue_codex_bot" class="telegram-btn">START THE BOT NOW</a>
     <div class="free-access">Access the bot for free</div>
   </div>
+</div>
 </body>
 </html>
