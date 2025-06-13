@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>QuantumDropAI - AI Bot</title>
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ET5BN3V2CM"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-ET5BN3V2CM');
+  </script>
 
   <!-- Meta Pixel Code -->
   <script>
@@ -21,49 +30,183 @@
   </script>
   <!-- End Meta Pixel Code -->
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-ET5BN3V2CM"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-ET5BN3V2CM');
-  </script>
-  <!-- End Google Analytics Code -->
-
   <style>
-    /* [STYLE CONTENT UNCHANGED] */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #f3e5f5);
+      color: #333;
+    }
+
+    .container {
+      height: 100vh;
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 15px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    h1 {
+      color: #6a1b9a;
+      font-size: 28px;
+      margin-bottom: 5px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    }
+
+    .download-btn {
+      display: inline-block;
+      background: linear-gradient(to right, #00c6ff, #0072ff);
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 14px;
+      box-shadow: 0 4px 10px rgba(0, 114, 255, 0.2);
+      transition: all 0.3s ease;
+    }
+
+    .download-btn:hover {
+      background: linear-gradient(to right, #0072ff, #00c6ff);
+      transform: scale(1.05);
+    }
+
+    .divider {
+      border-top: 1px dashed #b39ddb;
+      width: 100%;
+      margin: 10px 0;
+    }
+
+    .bot-info {
+      background: #ffffffee;
+      border-radius: 15px;
+      padding: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+      text-align: center;
+      animation: slideUp 1.3s ease;
+    }
+
+    .profile-pic {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin: 0 auto 15px;
+      border: 4px solid #7e57c2;
+      background: radial-gradient(circle, #ede7f6, #d1c4e9);
+      overflow: hidden;
+    }
+
+    .profile-pic img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .bot-name {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #6a1b9a;
+      text-shadow: 1px 1px 1px #ddd;
+    }
+
+    .members-count {
+      color: #555;
+      font-size: 14px;
+      margin-bottom: 15px;
+    }
+
+    .bot-description {
+      background: linear-gradient(to left, #e1f5fe, #ede7f6);
+      padding: 15px;
+      border-radius: 12px;
+      margin: 15px 0;
+      font-size: 14px;
+      line-height: 1.4;
+      text-align: center;
+      border-left: 4px solid #7e57c2;
+    }
+
+    .telegram-btn {
+      display: inline-block;
+      background: linear-gradient(145deg, #00e676, #00c853);
+      color: white;
+      padding: 12px 25px;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 16px;
+      box-shadow: 0 4px 10px rgba(0, 200, 83, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .telegram-btn:hover {
+      background: linear-gradient(145deg, #00c853, #00e676);
+      transform: translateY(-3px) scale(1.03);
+    }
+
+    .free-access {
+      margin-top: 14px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #4caf50;
+      text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.5);
+      animation: fadeIn 1.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
-<noscript>
-  <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=586514680582580&ev=PageView&noscript=1">
-</noscript>
+  <noscript>
+    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=586514680582580&ev=PageView&noscript=1">
+  </noscript>
 
-<div class="container">
-  <div class="header">
-    <h1>Telegram</h1>
-    <a href="https://telegram.org/" class="download-btn">DOWNLOAD TELEGRAM</a>
-  </div>
-
-  <div class="divider"></div>
-
-  <div class="bot-info">
-    <div class="profile-pic">
-      <img src="https://quantumdropai.github.io/QuantumdropAI/quantumdropAI.jpg" alt="QuantumDropAI Logo">
+  <div class="container">
+    <div class="header">
+      <h1>Telegram</h1>
+      <a href="https://telegram.org/" class="download-btn">DOWNLOAD TELEGRAM</a>
     </div>
 
-    <div class="bot-name">QuantumDropAI</div>
-    <div class="members-count">56,000+ active users</div>
+    <div class="divider"></div>
 
-    <div class="bot-description">
-     Tap the link below and join 56,000+ active users making fast crypto gains from telegram 🚀
+    <div class="bot-info">
+      <div class="profile-pic">
+        <img src="https://quantumdropai.github.io/QuantumdropAI/quantumdropAI.jpg" alt="QuantumDropAI Logo">
+      </div>
+
+      <div class="bot-name">QuantumDropAI</div>
+      <div class="members-count">56,000+ active users</div>
+
+      <div class="bot-description">
+        Tap the link below and join 56,000+ active users making fast crypto gains from telegram 🚀
+      </div>
+
+      <a href="https://t.me/Eternal_blue_codex_bot" class="telegram-btn">TAP HERE TO JOIN</a>
+      <div class="free-access">Access the bot for free</div>
     </div>
-
-    <a href="https://t.me/Eternal_blue_codex_bot" class="telegram-btn">TAP HERE TO JOIN</a>
-    <div class="free-access">Access the bot for free</div>
   </div>
-</div>
 </body>
 </html>
